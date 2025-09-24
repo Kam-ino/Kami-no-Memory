@@ -1,0 +1,22 @@
+.App-body {
+  min-height: 100vh;
+  text-align: center;
+  background-image: url('Kaminomemory.png');
+  background-size: cover; 
+}
+
+.card-grid{
+  margin: auto;
+  max-width: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px 
+}
+
+.App-header {
+  align-items: baseline;
+  font-size: calc(40px + 2vmin);
+  font-weight: bold;
+  color: #264d6d;
+  background-color: #e9b38f;
+}
