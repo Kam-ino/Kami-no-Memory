@@ -3,9 +3,10 @@
 }
 
 .card img{
-    width: 120px;
+    width: calc(5vw + 20px);
+    max-width: 100px;
     display: block;
-    border: 9px solid #fff;
+    border: 9px solid #1c355b;
     border-radius: 10px;
     background-color: #e1ded5;
 }

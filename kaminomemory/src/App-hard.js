@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+  import { useEffect, useState } from 'react';
 import './App.css';
 import Card from './components/Card';
 import Difficulty from './components/Difficulty';
@@ -14,6 +14,15 @@ const cardImg = [
   {"src": "/cards/Sakura.png", matched: false},
   {"src": "/cards/Torii.png", matched: false},
   {"src": "/cards/Bamboo.png", matched: false},
+  {"src": "/cards/Daruma.png", matched: false},
+  {"src": "/cards/Japan.png", matched: false},
+  {"src": "/cards/Kimono.png", matched: false},
+  {"src": "/cards/Kunai.png", matched: false},
+  {"src": "/cards/Ramen.png", matched: false},
+  {"src": "/cards/Shamisen.png", matched: false},
+  {"src": "/cards/Taiko.png", matched: false},
+  {"src": "/cards/Tanuki.png", matched: false},
+  {"src": "/cards/Wave.png", matched: false},
 ]
 
 function App() {

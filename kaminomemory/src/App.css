@@ -1,16 +1,42 @@
+.App {
+  min-width: 320px;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
 .App-body {
   min-height: 100vh;
+  min-width: 320px;
   text-align: center;
   background-image: url('Kaminomemory.png');
   background-size: cover; 
 }
 
-.card-grid{
-  margin: auto;
+.card-grid {
+  margin-left: calc(50vw - 300px);
   max-width: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px 
+  grid-gap: 10px;
+  position: absolute 
+}
+
+.card-grid-easy {
+  margin-left: calc(50vw - 150px);
+  max-width: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  position: absolute 
+}
+
+.card-grid-hard {
+  margin-left: calc(50vw - 450px);
+  max-width: 450px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  position: absolute 
 }
 
 .App-header {
@@ -19,4 +45,21 @@
   font-weight: bold;
   color: #264d6d;
   background-color: #e9b38f;
+  padding: 15px;
+}
+
+.ng {
+  background-color: #cc1100;
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.game-start {
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }

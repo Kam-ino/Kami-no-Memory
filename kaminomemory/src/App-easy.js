@@ -5,15 +5,8 @@ import Difficulty from './components/Difficulty';
 import { options } from './utils/GameConfig';
 
 const cardImg = [
-  {"src": "/cards/Ai.png", matched: false},
   {"src": "/cards/Dango.png", matched: false},
-  {"src": "/cards/Kamen.png", matched: false},
-  {"src": "/cards/Katana.png", matched: false},
-  {"src": "/cards/Koi.png", matched: false},
   {"src": "/cards/Onigiri.png", matched: false},
-  {"src": "/cards/Sakura.png", matched: false},
-  {"src": "/cards/Torii.png", matched: false},
-  {"src": "/cards/Bamboo.png", matched: false},
 ]
 
 function App() {
@@ -90,7 +83,7 @@ function App() {
           />
           <button onClick={shuffle} className='ng'>New Game</button>
         </div>
-        <div className='card-grid-hard' currentDifficulty={difficulty}> 
+        <div className='card-grid-easy' currentDifficulty={difficulty}> 
           {cards.map(card => (
             <Card 
               key={card.id} 

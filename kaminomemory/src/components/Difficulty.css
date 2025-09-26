@@ -1,0 +1,64 @@
+.difficulty-selector {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+
+/* Label styling */
+.difficulty-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Dropdown container */
+.difficulty-selector .difficulty-btn {
+  display: block;
+  width: 160px;
+  padding: 10px 14px;
+  margin: 0;
+  border: none;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Active (selected) difficulty */
+.difficulty-btn.active {
+  background: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Hover effect */
+.difficulty-btn:hover {
+  background: #f0f0f0;
+}
+
+/* Dropdown animation wrapper */
+.difficulty-selector {
+  border: 2px solid #333;
+  border-radius: 6px;
+  overflow: hidden;
+  max-height: 48px; /* only show one option initially */
+  transition: max-height 0.4s ease, box-shadow 0.3s ease;
+}
+
+/* When expanded */
+.difficulty-selector.open {
+  max-height: 500px; /* enough to show all options */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Smooth fade-in for options */
+.difficulty-btn {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.difficulty-selector.open .difficulty-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
