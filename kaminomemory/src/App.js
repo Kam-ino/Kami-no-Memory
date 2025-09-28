@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Card from './components/Card';
-import Difficulty from './components/Difficulty';
+import Difficulty from './components/Difficulty.js';
 import { options } from './utils/GameConfig';
+import Header from './components/Header.js';
 
 const cardImg = [
   {"src": "/cards/Ai.png", matched: false},
@@ -13,7 +14,6 @@ const cardImg = [
   {"src": "/cards/Onigiri.png", matched: false},
   {"src": "/cards/Sakura.png", matched: false},
   {"src": "/cards/Torii.png", matched: false},
-  {"src": "/cards/Bamboo.png", matched: false},
 ]
 
 function App() {
@@ -80,7 +80,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header"> Kami no Memory </header>
+      <Header/>
       <div className='App-body'>
         <h2 style={{marginTop:'-10px'}}>Turns: {turns}</h2>
         <div className='game-start'>
@@ -90,7 +90,7 @@ function App() {
           />
           <button onClick={shuffle} className='ng'>New Game</button>
         </div>
-        <div className='card-grid-hard' currentDifficulty={difficulty}> 
+        <div className='card-grid' currentDifficulty={difficulty}> 
           {cards.map(card => (
             <Card 
               key={card.id} 

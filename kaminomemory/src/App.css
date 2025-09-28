@@ -31,21 +31,12 @@
 }
 
 .card-grid-hard {
-  margin-left: calc(50vw - 450px);
+  margin-left: calc(50vw - 400px);
   max-width: 450px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   position: absolute 
-}
-
-.App-header {
-  align-items: baseline;
-  font-size: calc(40px + 2vmin);
-  font-weight: bold;
-  color: #264d6d;
-  background-color: #e9b38f;
-  padding: 15px;
 }
 
 .ng {
