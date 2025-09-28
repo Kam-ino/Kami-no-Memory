@@ -1,64 +1,75 @@
-.difficulty-selector {
+.dropdown {
   position: relative;
-  display: inline-block;
-  font-family: Arial, sans-serif;
+  width: 200px;
+  font-family: sans-serif;
+  z-index: 7;
 }
 
-/* Label styling */
-.difficulty-label {
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-/* Dropdown container */
-.difficulty-selector .difficulty-btn {
-  display: block;
-  width: 160px;
-  padding: 10px 14px;
-  margin: 0;
+.dropdown-toggle {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #2c3e50;
+  color: white;
   border: none;
-  background: #fff;
-  text-align: left;
   cursor: pointer;
-  font-size: 15px;
-  transition: background 0.3s ease, color 0.3s ease;
+  text-align: left;
+  border-radius: 5px;
+  position: relative;
+  transition: background-color 0.3s ease;
 }
 
-/* Active (selected) difficulty */
-.difficulty-btn.active {
-  background: #007bff;
-  color: #fff;
-  font-weight: bold;
+.dropdown-toggle:hover {
+  background-color: #34495e;
 }
 
-/* Hover effect */
-.difficulty-btn:hover {
-  background: #f0f0f0;
+.arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  transition: transform 0.3s ease;
 }
 
-/* Dropdown animation wrapper */
-.difficulty-selector {
-  border: 2px solid #333;
-  border-radius: 6px;
+.arrow.down {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.arrow.up {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  margin-top: 5px;
   overflow: hidden;
-  max-height: 48px; /* only show one option initially */
-  transition: max-height 0.4s ease, box-shadow 0.3s ease;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* When expanded */
-.difficulty-selector.open {
-  max-height: 500px; /* enough to show all options */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.dropdown-menu.show {
+  max-height: 300px;
 }
 
-/* Smooth fade-in for options */
-.difficulty-btn {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+.dropdown-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.difficulty-selector.open .difficulty-btn {
-  opacity: 1;
-  transform: translateY(0);
+.dropdown-item:hover {
+  background-color: #bdc3c7;
+}
+
+.dropdown-item.selected {
+  background-color: #95a5a6;
+  font-weight: bold;
 }

@@ -3,7 +3,8 @@
 }
 
 .card img{
-    width: calc(5vw + 10px);
+    width: calc(5vw + 50px);
+    max-width: 120px;
     display: block;
     border: 0.9ex solid #1c355b;
     border-radius: 10px;
@@ -29,4 +30,14 @@
 .flipped .back{
     transform: rotateY(90deg);
     transition-delay: 0s;
+}
+
+@media(max-width:320px) {
+    .card img{
+        width: calc(1vw + 50px);
+        display: block;
+        border: 0.9ex solid #1c355b;
+        border-radius: 10px;
+        background-color: #e1ded5;
+    }
 }

@@ -13,12 +13,12 @@
 }
 
 .card-grid {
-  margin-left: calc(50vw - 300px);
-  max-width: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
-  position: absolute 
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-grid-easy {
@@ -53,4 +53,18 @@
   display:flex;
   align-items: center;
   justify-content: center;
+}
+
+@media(min-width:320px) {
+  .card-grid {
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    position: absolute;
+    justify-self: center;
+  } 
+
+
+
 }

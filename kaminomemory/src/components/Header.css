@@ -12,6 +12,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
 }
 
 nav a {
@@ -40,7 +41,7 @@ nav svg {
     display: none;
 }
 
-@media(max-width: 450px) {
+@media(max-width: 750px) {
     .links-container {
         display: none;
         flex-direction: column;

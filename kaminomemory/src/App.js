@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Card from './components/Card';
-import Difficulty from './components/Difficulty.js';
+import DifficultyDropdown from './components/Difficulty.js';
 import { options } from './utils/GameConfig';
 import Header from './components/Header.js';
 
@@ -23,7 +23,7 @@ function App() {
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [disabled, setDisabled] = useState(false)
-  const [difficulty, setDifficulty] = useState(options[1]); 
+  // const [difficulty, setDifficulty] = useState(options[1]); 
 
   const shuffle = () => {
     const shuffledCards = [...cardImg,...cardImg]
@@ -71,11 +71,8 @@ function App() {
     shuffle()
   },[])
 
-  const handleDifficultyChange = (newDifficulty) => {
-    shuffle();
-    setTimeout(() => {
-      setDifficulty(newDifficulty);
-    }, 600);
+  const handleDifficultyChange = (value) => {
+    console.log('Selected difficulty:', value);
   };
 
   return (
@@ -84,22 +81,23 @@ function App() {
       <div className='App-body'>
         <h2 style={{marginTop:'-10px'}}>Turns: {turns}</h2>
         <div className='game-start'>
-          <Difficulty
-            currentDifficulty={difficulty}
+          <DifficultyDropdown
             onDifficultyChange={handleDifficultyChange}
           />
           <button onClick={shuffle} className='ng'>New Game</button>
         </div>
-        <div className='card-grid' currentDifficulty={difficulty}> 
-          {cards.map(card => (
-            <Card 
-              key={card.id} 
-              card={card} 
-              handleChoice={handleChoice}
-              flipped={card === choiceOne || card === choiceTwo || card.matched}
-              disabled={disabled}
-              />
-          ))}
+        <div style={{alignItems:"center", justifyContent:"center"}}>
+          <div className='card-grid'> 
+            {cards.map(card => (
+              <Card 
+                key={card.id} 
+                card={card} 
+                handleChoice={handleChoice}
+                flipped={card === choiceOne || card === choiceTwo || card.matched}
+                disabled={disabled}
+                />
+            ))}
+          </div>
         </div>
       </div>
     </div>
