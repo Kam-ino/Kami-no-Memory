@@ -9,7 +9,7 @@ const options = [
 
 export default function DifficultyDropdown({ onSelect }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState(options[1]); // Default: Medium
+  const [selected, setSelected] = useState(options[1]); // Default Medium
 
   const handleSelect = (option) => {
     setSelected(option);

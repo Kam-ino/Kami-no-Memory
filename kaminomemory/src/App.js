@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Card from './components/Card';
 import DifficultyDropdown from './components/Difficulty.js';
-import { options } from './utils/GameConfig';
 import Header from './components/Header.js';
 
 const cardImg = [
@@ -79,12 +78,14 @@ function App() {
     <div className="App">
       <Header/>
       <div className='App-body'>
-        <h2 style={{marginTop:'-10px'}}>Turns: {turns}</h2>
         <div className='game-start'>
           <DifficultyDropdown
             onDifficultyChange={handleDifficultyChange}
           />
           <button onClick={shuffle} className='ng'>New Game</button>
+          <div className='turn-counter'>
+            Turns: {turns}
+          </div>
         </div>
         <div style={{alignItems:"center", justifyContent:"center"}}>
           <div className='card-grid'> 
